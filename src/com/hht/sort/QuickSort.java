@@ -12,11 +12,11 @@ import static com.hht.sort.SortCommonMethod.show;
  */
 public class QuickSort {
     public static void sort(Comparable[] a) {
-        StdOut.println("Original array");
-        show(a);
+//        StdOut.println("Original array");
+//        show(a);
         StdRandom.shuffle(a);
-        StdOut.println("after shuffle array");
-        show(a);
+//        StdOut.println("after shuffle array");
+//        show(a);
         sort(a, 0, a.length - 1);
     }
 
@@ -35,12 +35,12 @@ public class QuickSort {
         int j = r + 1;
         Comparable guard = a[l];
         while (true) {
-            while (less(a[++i], guard)) {  // while中没有计算a[l] ,循环后计算
-                if (i == r) { // 防止完全有序时，i值越界
+            while (less(a[++i], guard)) {  // in while loop, no compare to a[l], waiting for after loop to exchange.
+                if (i == r) { // when array is sorted, val i will out of the array boundary
                     break;
                 }
             }
-            while (less(guard, a[--j])) {  //j = r+1 因此 --j 没有遗漏元素
+            while (less(guard, a[--j])) {  //if '--j' won't lost last item of array, val j need 'j = r+1'
             }
             if (i >= j) {
                 break;
