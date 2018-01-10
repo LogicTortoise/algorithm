@@ -36,4 +36,11 @@ public class SortCommonMethod {
         StdOut.println();
     }
 
+    public static void printIsSorted(Comparable[] a) {
+        if (isSorted(a)) {
+            System.out.println("Sorted");
+        } else {
+            System.out.println("Unsorted");
+        }
+    }
 }
