@@ -1,5 +1,6 @@
-package com.hht.sort;
+package com.hht.test.sort;
 
+import com.hht.sort.ThreeWayQuickSort;
 import edu.princeton.cs.algs4.StdIn;
 
 import static com.hht.sort.SortCommonMethod.isSorted;
@@ -8,19 +9,20 @@ import static com.hht.sort.SortCommonMethod.show;
 /**
  * Created by User on 2018/1/9.
  */
-public class SortTestCase {
+public class ThreeWayQuickSortTest {
     public static void main(String[] args) {
         System.out.println("Start sort...");
         String[] a = StdIn.readAllStrings();
-        QuickSort.sort(a);
+        ThreeWayQuickSort.sort(a);
         assert isSorted(a);
         System.out.println("after sort...");
         show(a);
     }
 
     /*
-    E:\CodeClub\algorithm\src  javac com/hht/sort/*.java -Xlint:unchecked
-    E:\CodeClub\algorithm\src  java com.hht.sort.SortTestCase < ..\algs4-data\words3.txt
+    E:\CodeClub\algorithm\src  javac com/hht/sort/ThreeWayQuickSort.java -Xlint:unchecked
+    E:\CodeClub\algorithm\src  javac com/hht/test/sort/ThreeWayQuickSortTest.java -Xlint:unchecked
+    E:\CodeClub\algorithm\src  java com.hht.test.sort.ThreeWayQuickSortTest < ..\algs4-data\words3.txt
     Original array
     bed bug dad yes zoo now for tip ilk dim tag jot sob nob sky hut men egg few jay owl joy rap gig wee was wad fee tap tar dug jam all bad yet
     after shuffle array
