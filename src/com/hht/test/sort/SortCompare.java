@@ -16,11 +16,15 @@ public class SortCompare {
         String[] a = StdIn.readAllStrings();
         System.out.println("Array length: " + a.length);
 
-        runningTime("ThreeWayQuickSort", a);
-        runningTime("QuickSort", a);
-        runningTime("ShellSort", a);
-        runningTime("Selection", a);
-        runningTime("InsertSort", a);
+//        runningTime("ThreeWayQuickSort", a);
+//        runningTime("QuickSort", a);
+//        runningTime("ShellSort", a);
+        runningTime("MergeSort", a);
+        runningTime("MergeXSort", a);
+        runningTime("MergeX", a);
+//        runningTime("Selection", a);
+//        runningTime("InsertSort", a);
+//        runningTime("InsertXSort", a);
 
         System.out.println("Sort contend finished...");
     }
@@ -41,13 +45,28 @@ public class SortCompare {
         if (name.equals("InsertSort")) {
             InsertSort.sort(a);
         }
+        if (name.equals("InsertXSort")) {
+            InsertSort.sort(a, 0, a.length - 1);
+//            SortCommonMethod.printIsSorted(a);
+        }
         if (name.equals("ShellSort")) {
             ShellSort.sort(a);
+        }
+        if (name.equals("MergeSort")) {
+            MergeSort.sort(a);
+            SortCommonMethod.printIsSorted(a);
+        }
+        if (name.equals("MergeXSort")) {
+            MergeXSort.sort(a);
+            SortCommonMethod.printIsSorted(a);
+        }
+        if (name.equals("MergeX")) {
+            MergeX.sort(a);
+            SortCommonMethod.printIsSorted(a);
         }
         if (name.equals("HeapSort")) {
 //            ThreeWayQuickSort.sort(a);
         }
-//        SortCommonMethod.printIsSorted(a);
         System.out.println(name + " elapsed time: " + timer.elapsedTime());
     }
 

@@ -14,4 +14,12 @@ public class InsertSort {
             }
         }
     }
+
+    public static void sort(Comparable[] a, int l, int r) {
+        for (int i = l + 1; i <= r; i++) {
+            for (int j = i; j > l && less(a[j], a[j - 1]); j--) {
+                exch(a, j, j - 1);
+            }
+        }
+    }
 }
