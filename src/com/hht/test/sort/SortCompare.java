@@ -19,9 +19,10 @@ public class SortCompare {
 //        runningTime("ThreeWayQuickSort", a);
 //        runningTime("QuickSort", a);
 //        runningTime("ShellSort", a);
-        runningTime("MergeSort", a);
-        runningTime("MergeXSort", a);
-        runningTime("MergeX", a);
+//        runningTime("MergeSort", a);
+//        runningTime("MergeXSort", a);
+//        runningTime("MergeX", a);
+        runningTime("HeapSort", a);
 //        runningTime("Selection", a);
 //        runningTime("InsertSort", a);
 //        runningTime("InsertXSort", a);
@@ -65,7 +66,8 @@ public class SortCompare {
             SortCommonMethod.printIsSorted(a);
         }
         if (name.equals("HeapSort")) {
-//            ThreeWayQuickSort.sort(a);
+            HeapSort.sort(a);
+            SortCommonMethod.printIsSorted(a);
         }
         System.out.println(name + " elapsed time: " + timer.elapsedTime());
     }

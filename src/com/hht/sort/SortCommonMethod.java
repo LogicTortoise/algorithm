@@ -23,6 +23,8 @@ public class SortCommonMethod {
     public static boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
             if (less(a[i], a[i - 1])) {
+                StdOut.println("i - 1 | i");
+                StdOut.println(a[i - 1] + " | " +a[i]);
                 return false;
             }
         }
@@ -49,8 +51,8 @@ public class SortCommonMethod {
         if (isSorted(a)) {
             System.out.println("Sorted");
         } else {
-            System.out.println("Unsorted");
             show(a);
+            System.out.println("Unsorted");
         }
     }
 }
