@@ -12,11 +12,7 @@ import static com.hht.sort.SortCommonMethod.show;
  */
 public class QuickSort {
     public static void sort(Comparable[] a) {
-//        StdOut.println("Original array");
-//        show(a);
         StdRandom.shuffle(a);
-//        StdOut.println("after shuffle array");
-//        show(a);
         sort(a, 0, a.length - 1);
     }
 
